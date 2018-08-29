@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>vong lap long nhau</title>
+    <meta charset="UTF-8">
+    <title>vong lap long nhau</title>
+    <style type="text/css">
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    td{
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+    </style>
 </head>
+
 <body>
-	<script type="text/javascript">
-		for(let i = 1;i<=10;i++){
-			for(let j=1;j<=10;j++){
-				document.write(i*j + ' ');
-			}
-			document.write("<br/>");
-		}
-	</script>
+    <table id="tb" style="width: 55%;">
+    </table>
+    <script type="text/javascript">
+    let tb = document.getElementById("tb");
+    let str = "";
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 10; j++) {
+            str += "<td>" + i * j + "</td>";
+        }
+        tb.innerHTML += str;
+        str = "";
+    }
+    </script>
 </body>
+
 </html>
